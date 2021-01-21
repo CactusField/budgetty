@@ -20,7 +20,7 @@ class AddPurchase extends Component {
     let { addPurchase } = this.props;
     if (!addPurchase) addPurchase = () => alert("Missing prop: addPurchase (AddPurchase.js)")
     let num = parseInt(price);
-    if (num < 0) return alert('Cannot have price less than zero.')
+    if (num < 0) return alert('Cannot have price -0')
     if (!Number.isNaN(num) && typeof num === 'number') {
       if (num && category && description) {
         if (!addPurchase) return this.backup();
